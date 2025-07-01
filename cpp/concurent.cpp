@@ -18,7 +18,7 @@ struct TLimitedExecuter {
         }
 
         if(doRun) {
-            Function(args...);
+            Function(std::forward<Args>(args)...);
         }
 
         return doRun;
